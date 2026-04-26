@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luz Hair — May 2025 Content Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #080808;
+  --dark: #111111;
+  --card: #161616;
+  --border: #242424;
+  --gold: #C9A84C;
+  --gold2: #E8D5A0;
+  --gold-dim: rgba(201,168,76,0.12);
+  --gold-glow: rgba(201,168,76,0.06);
+  --white: #F5F0E8;
+  --muted: #6B6558;
+  --text: #C8C0B4;
+
+  --edu: #4A7C6F;
+  --edu-dim: rgba(74,124,111,0.15);
+  --elv: #7C5C8A;
+  --elv-dim: rgba(124,92,138,0.15);
+  --cta: #C9A84C;
+  --cta-dim: rgba(201,168,76,0.15);
+  --rest: #2A2A2A;
+  --rest-dim: rgba(42,42,42,0.5);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+  opacity:.4;
+}
+
+/* ── HEADER ── */
+.hero {
+  position: relative;
+  padding: 80px 60px 60px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.hero-tag span { width:5px; height:5px; background:var(--gold); border-radius:50%; display:inline-block; }
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-lbl {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── PROGRESS OVERVIEW ── */
+.progress-section {
+  padding: 48px 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.cat-progress {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.cat-progress:hover { border-color: rgba(201,168,76,0.4); }
+
+.cat-progress-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.cat-progress-bar-wrap {
+  height: 3px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.cat-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold2));
+  border-radius: 99px;
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.cat-progress-nums {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.cat-progress-nums span:first-child { color: var(--gold); font-weight: 500; }
+
+/* ── LEGEND ── */
+.legend {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── WEEK NAVIGATION ── */
+.week-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,8,8,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.week-nav::-webkit-scrollbar { display:none; }
+
+.week-btn {
+  padding: 18px 24px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-family: 'Jost', sans-serif;
+}
+
+.week-btn:hover { color: var(--text); }
+.week-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ── MAIN CONTENT ── */
+.main {
+  padding: 60px;
+}
+
+/* ── WEEK SECTION ── */
+.week-section {
+  display: none;
+  animation: fadeUp 0.3s ease;
+}
+
+.week-section.active { display: block; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(12px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+.week-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.week-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+}
+
+.week-theme {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 4px 12px;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 2px;
+}
+
+/* ── DAY CARDS ── */
+.days-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.day-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.day-card:hover {
+  border-color: rgba(201,168,76,0.25);
+  transform: translateX(4px);
+}
+
+.day-card.rest {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
+.day-card.cta-card {
+  border-color: rgba(201,168,76,0.3);
+  background: linear-gradient(135deg, #161410, var(--card));
+}
+
+.day-card.cta-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold), var(--gold2));
+}
+
+.day-card.edu-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--edu);
+}
+
+.day-card.elv-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--elv);
+}
+
+.day-header {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  padding: 20px 24px 20px 28px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.day-date-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-name {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.day-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1;
+}
+
+.day-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.day-category {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.3px;
+}
+
+.day-hook {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--gold2);
+  line-height: 1.4;
+}
+
+.day-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.pillar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.pillar-badge.edu { background: var(--edu-dim); color: #7BC4B5; border: 1px solid rgba(74,124,111,0.3); }
+.pillar-badge.elv { background: var(--elv-dim); color: #C4A0D4; border: 1px solid rgba(124,92,138,0.3); }
+.pillar-badge.cta { background: var(--cta-dim); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+.pillar-badge.rest-badge { background: var(--rest-dim); color: var(--muted); border: 1px solid var(--border); }
+
+.status-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s;
+  color: var(--muted);
+}
+
+.status-btn:hover { border-color: var(--gold); color: var(--gold); }
+.status-btn.done { background: var(--gold); border-color: var(--gold); color: var(--black); }
+.status-btn.scheduled { background: rgba(74,124,111,0.3); border-color: var(--edu); color: #7BC4B5; }
+
+/* ── DAY BODY (expandable) ── */
+.day-body {
+  display: none;
+  padding: 0 28px 24px 28px;
+  border-top: 1px solid var(--border);
+}
+
+.day-card.expanded .day-body { display: block; }
+
+.expand-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--muted);
+  transition: all 0.25s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.day-card.expanded .expand-icon {
+  transform: rotate(45deg);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.detail-block {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.detail-block.full { grid-column: 1 / -1; }
+
+.detail-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.detail-text {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.detail-text strong { color: var(--white); font-weight: 500; }
+
+.cta-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--gold2);
+  line-height: 1.6;
+  border-left: 2px solid var(--gold);
+  padding-left: 14px;
+}
+
+/* ── TRACKER SUMMARY ── */
+.tracker-bar {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tracker-dot {
+  width: 20px; height: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.tracker-dot:hover { border-color: var(--gold); }
+.tracker-dot.done { background: var(--gold); border-color: var(--gold); color: var(--black); }
+.tracker-dot.scheduled { background: var(--edu-dim); border-color: var(--edu); color: #7BC4B5; }
+.tracker-dot.rest-day { background: var(--rest-dim); border-color: transparent; color: var(--muted); opacity: 0.5; }
+
+/* ── GLOBAL TRACKER ── */
+.tracker-section {
+  padding: 40px 60px;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03));
+}
+
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(31, 1fr);
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.global-dot {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: var(--muted);
+  font-weight: 600;
+  position: relative;
+}
+
+.global-dot:hover::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-size: 10px;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 100;
+  letter-spacing: 0.5px;
+}
+
+.global-dot.done { background: var(--gold); border-color: var(--gold); color: var(--black); }
+.global-dot.scheduled { background: var(--edu-dim); border-color: var(--edu); color: #7BC4B5; }
+.global-dot.rest-day { opacity: 0.3; cursor: default; }
+.global-dot.cta-day { border-color: rgba(201,168,76,0.4); }
+
+.tracker-summary {
+  display: flex;
+  gap: 40px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.t-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.t-stat-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.t-stat-lbl {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── HOOKS & RULES ── */
+.rules-section {
+  padding: 48px 60px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.rule-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.rule-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.rule-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+}
+
+.rule-item:last-child { border-bottom: none; }
+
+.rule-bullet {
+  color: var(--gold);
+  font-size: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* ── FOOTER ── */
+.foot {
+  padding: 32px 60px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.foot-note {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px) {
+  .hero, .main, .progress-section, .tracker-section, .rules-section { padding: 32px 20px; }
+  .week-nav { padding: 0 20px; }
+  .foot { padding: 24px 20px; flex-direction: column; gap: 12px; text-align: center; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .rules-section { grid-template-columns: 1fr; }
+  .tracker-grid { grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .global-dot { font-size: 9px; }
+  .hero-stats { gap: 28px; }
+  .week-label { font-size: 36px; }
+  .day-header { grid-template-columns: 60px 1fr auto; gap: 12px; }
+  .day-hook { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-tag"><span></span> Ravvis Media Production <span></span></div>
+  <h1>Luz <em>Hair</em><br>Content Plan</h1>
+  <p class="hero-sub">May 2025 &nbsp;·&nbsp; Command Authority &nbsp;·&nbsp; Convert with Confidence</p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-val">31</span><span class="stat-lbl">Days</span></div>
+    <div class="stat"><span class="stat-val">28</span><span class="stat-lbl">Posts</span></div>
+    <div class="stat"><span class="stat-val">5</span><span class="stat-lbl">CTA Days</span></div>
+    <div class="stat"><span class="stat-val">3</span><span class="stat-lbl">Rest Days</span></div>
+    <div class="stat"><span class="stat-val" id="doneCount">0</span><span class="stat-lbl">Completed</span></div>
+  </div>
+</header>
+
+<!-- PROGRESS OVERVIEW -->
+<section class="progress-section">
+  <div class="section-title">Category Progress</div>
+  <div class="progress-grid" id="catProgressGrid"></div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--edu)"></div> Educate</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--elv)"></div> Elevate</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div> Heavy CTA</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--border)"></div> Rest</div>
+  </div>
+</section>
+
+<!-- WEEK NAV -->
+<nav class="week-nav">
+  <button class="week-btn active" onclick="showWeek(1,this)">Week 1</button>
+  <button class="week-btn" onclick="showWeek(2,this)">Week 2</button>
+  <button class="week-btn" onclick="showWeek(3,this)">Week 3</button>
+  <button class="week-btn" onclick="showWeek(4,this)">Week 4</button>
+  <button class="week-btn" onclick="showWeek(5,this)">Week 5</button>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ══ WEEK 1 ══ -->
+<div class="week-section active" id="week1">
+  <div class="week-header">
+    <div class="week-label">Week 01</div>
+    <div class="week-theme">Introduce the Brand</div>
+  </div>
+  <div class="days-grid" id="days-w1"></div>
+</div>
+
+<!-- ══ WEEK 2 ══ -->
+<div class="week-section" id="week2">
+  <div class="week-header">
+    <div class="week-label">Week 02</div>
+    <div class="week-theme">Educate & Build Trust</div>
+  </div>
+  <div class="days-grid" id="days-w2"></div>
+</div>
+
+<!-- ══ WEEK 3 ══ -->
+<div class="week-section" id="week3">
+  <div class="week-header">
+    <div class="week-label">Week 03</div>
+    <div class="week-theme">Show the Product & Social Proof</div>
+  </div>
+  <div class="days-grid" id="days-w3"></div>
+</div>
+
+<!-- ══ WEEK 4 ══ -->
+<div class="week-section" id="week4">
+  <div class="week-header">
+    <div class="week-label">Week 04</div>
+    <div class="week-theme">Build Community & Drive Action</div>
+  </div>
+  <div class="days-grid" id="days-w4"></div>
+</div>
+
+<!-- ══ WEEK 5 ══ -->
+<div class="week-section" id="week5">
+  <div class="week-header">
+    <div class="week-label">Week 05</div>
+    <div class="week-theme">Close the Month Strong</div>
+  </div>
+  <div class="days-grid" id="days-w5"></div>
+</div>
+
+</main>
+
+<!-- GLOBAL TRACKER -->
+<section class="tracker-section">
+  <div class="section-title">May 2025 — Full Month Tracker</div>
+  <div class="tracker-grid" id="globalTracker"></div>
+  <div class="tracker-summary">
+    <div class="t-stat"><span class="t-stat-val" id="t-done">0</span><span class="t-stat-lbl">Posted</span></div>
+    <div class="t-stat"><span class="t-stat-val" id="t-sched">0</span><span class="t-stat-lbl">Scheduled</span></div>
+    <div class="t-stat"><span class="t-stat-val" id="t-pending">28</span><span class="t-stat-lbl">Pending</span></div>
+    <div class="t-stat"><span class="t-stat-val" id="t-pct">0%</span><span class="t-stat-lbl">Month Complete</span></div>
+  </div>
+</section>
+
+<!-- HOOKS & RULES -->
+<section class="rules-section">
+  <div class="rule-card">
+    <div class="rule-title">Hook Writing Rules</div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span><strong>Authority:</strong> "The raw hair market doesn't want you to know this."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span><strong>Pain point:</strong> "You've wasted money on hair that didn't last. Here's why."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span><strong>Contrast:</strong> "Cheap hair. Raw hair. Here's the real cost breakdown."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span><strong>Exclusivity:</strong> "This is not for everyone. But if you know, you know. 🖤"</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span><strong>Math:</strong> "3 installs at $200 = $600. Our raw hair = $___. Do the math."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span><strong>Exposure:</strong> "Your vendor is selling you Vietnamese hair. But is it actually raw?"</span></div>
+  </div>
+  <div class="rule-card">
+    <div class="rule-title">CTA Formula — Every Video</div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span>"Link in bio. Shop now." — clean, direct, no fluff</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span>"15% off your first order. BNPL available. Link in bio."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span>"DM us <strong>'RAW'</strong> and we'll help you choose your texture."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span>"This is not cheap hair. It was never meant to be. Shop Luz Hair."</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span>"Split it into payments. Own it for years." — BNPL angle</span></div>
+    <div class="rule-item"><span class="rule-bullet">—</span><span>Every video ends with a CTA. No exceptions. No passive content.</span></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-brand">Luz Hair × Ravvis Media</div>
+  <div class="foot-note">May 2025 Content Plan · Confidential</div>
+</footer>
+
+<script>
+// ══════════════════════════════════════════════
+// CONTENT DATA
+// ══════════════════════════════════════════════
+const days = [
+  // WEEK 1
+  { day:"Fri", date:"May 1",  week:1, cat:"Raw Vietnamese Hair", pillar:"edu", catKey:"viet",
+    hook:"Vietnamese raw hair is the only hair that gets better with age. Here's why.",
+    direction:"Educate on what makes Vietnamese raw hair unique — cuticle alignment, single-donor sourcing, longevity. Speak directly to camera. No fluff. Pure knowledge. This is the opening statement of the brand.",
+    cta:"End with: 'This is what we sell at Luz Hair. Link in bio.'",
+    format:"Talking head or text overlay video", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sat", date:"May 2",  week:1, cat:"Raw Vietnamese Hair", pillar:"elv", catKey:"viet",
+    hook:"This is what $____ of Vietnamese raw hair actually looks like.",
+    direction:"Slow, cinematic product showcase. Show the texture, the shine, the movement in real light. No talking. Let the hair do the work. Luxury music. Clean background. Every frame should feel editorial.",
+    cta:"Text overlay at end: 'Luz Hair. Link in bio.'",
+    format:"Cinematic product video", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sun", date:"May 3",  week:1, cat:"Raw Vietnamese Hair", pillar:"edu", catKey:"viet",
+    hook:"Your hair vendor is selling you Vietnamese hair. But is it actually raw? 3 ways to tell.",
+    direction:"Hard-hitting education. Expose the market. Position Luz Hair as the brand that tells the truth. 3 clear, visual tests buyers can do. End with: 'We only carry verified raw. Always.'",
+    cta:"'We only carry verified raw. Always. Shop Luz Hair — link in bio.'",
+    format:"Listicle/educational video", platform:"TikTok + Instagram Reel" },
+
+  { day:"Mon", date:"May 4",  week:1, cat:"Raw Vietnamese Hair", pillar:"elv", catKey:"viet",
+    hook:"The install that made us stop scrolling. 😮‍💨",
+    direction:"Aesthetic transformation video. Vietnamese raw hair — before and after. Premium edit. No heavy voiceover. Let the visual speak. Use a slow reveal. The goal is aspiration — make the viewer feel like they NEED this hair.",
+    cta:"'Get yours. Link in bio. 15% off first order.'",
+    format:"Transformation/before-after", platform:"TikTok + Instagram Reel" },
+
+  { day:"Tue", date:"May 5",  week:1, cat:"HEAVY CTA", pillar:"cta", catKey:"cta",
+    hook:"We checked the raw hair market. Our competitors are charging 80% more for the same hair.",
+    direction:"Direct, confident, no apology. Walk through a real price comparison — show the numbers on screen. This is not a discount video. This is a value statement. 'Luz Hair is priced for the informed buyer. The one who knows what real raw hair costs.'",
+    cta:"'Shop now — 15% off your first order. BNPL available. Link in bio. This is not a forever price.' Add urgency: limited framing.",
+    format:"Direct to camera / price comparison", platform:"TikTok + Instagram Reel" },
+
+  { day:"Wed", date:"May 6",  week:1, cat:"Raw Indian Hair", pillar:"edu", catKey:"indian",
+    hook:"Indian raw hair vs Vietnamese raw hair — which one is actually for you?",
+    direction:"Side-by-side breakdown. Texture differences, use cases, longevity. Be specific — which texture suits which lifestyle, which holds better in humidity, which is better for styling. Position Luz Hair as the expert that helps buyers choose RIGHT.",
+    cta:"'Both available at Luz Hair. Link in bio.'",
+    format:"Comparison / split screen", platform:"TikTok + Instagram Reel" },
+
+  { day:"Thu", date:"May 7",  week:1, cat:"Raw Indian Hair", pillar:"elv", catKey:"indian",
+    hook:"Indian raw hair. No heat. No product. Just raw.",
+    direction:"Pure texture showcase. Indian raw hair in its natural state — movement, density, natural wave pattern. No talking. Cinematic. Aspirational. Show the hair doing what raw hair does with zero manipulation.",
+    cta:"Subtle text at close: 'Raw. Unfiltered. Yours. Shop Luz Hair.'",
+    format:"No-talking texture showcase", platform:"TikTok + Instagram Reel" },
+
+  // WEEK 2
+  { day:"Fri", date:"May 8",  week:2, cat:"Raw Indian Hair", pillar:"edu", catKey:"indian",
+    hook:"Why Indian raw hair lasts longer than anything you've bought before.",
+    direction:"Educate on cuticle integrity, sourcing from single donors, why it outperforms processed hair. Use bold statements. Data-backed tone. This is not a sales pitch — it is education that happens to make the sale.",
+    cta:"'This is what we carry at Luz Hair. Come see for yourself. Link in bio.'",
+    format:"Educational talking head", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sat", date:"May 9",  week:2, cat:"Raw Indian Hair", pillar:"elv", catKey:"indian",
+    hook:"The only install you'll need this summer. 🖤",
+    direction:"Indian raw hair summer install. Aesthetic edit. Slow motion, soft lighting, premium feel. No hard sell — the quality sells itself. Make the viewer feel the ease, the luxury, the confidence of this hair.",
+    cta:"'Shop Indian raw hair at Luz Hair. Link in bio.'",
+    format:"Lifestyle install video", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sun", date:"May 10", week:2, cat:"HEAVY CTA", pillar:"cta", catKey:"cta",
+    hook:"You've bought cheap hair 3 times this year. That's already more than the cost of our raw hair.",
+    direction:"Math breakdown on screen. Show the real cost of cheap hair vs one raw hair investment. Use actual numbers. $150 x 3 = $450. Our raw hair = $___. No competition. End with BNPL — remove the last barrier.",
+    cta:"'Split it into payments. Own it for years. 15% off your first order today only.' Urgency: 'This offer ends soon.'",
+    format:"Math/comparison video", platform:"TikTok + Instagram Reel" },
+
+  { day:"Mon", date:"May 11", week:2, cat:"Virgin Hair", pillar:"edu", catKey:"virgin",
+    hook:"Virgin hair is not raw hair. If your vendor told you otherwise, they lied.",
+    direction:"Clear, authoritative distinction. Educate the market without aggression — just facts. Chemical processing, cuticle damage, what 'virgin' actually means vs 'raw'. End with: 'Luz Hair carries both. We'll always tell you exactly what you're buying.'",
+    cta:"'Know what you're buying. Shop with confidence. Link in bio.'",
+    format:"Educational — direct to camera", platform:"TikTok + Instagram Reel" },
+
+  { day:"Tue", date:"May 12", week:2, cat:"Virgin Hair", pillar:"elv", catKey:"virgin",
+    hook:"Virgin hair. Untouched. Unprocessed. Unmatched.",
+    direction:"Luxury product visual. Clean, minimal set. Show the hair, the texture, the packaging. Let the aesthetic do the heavy lifting. This is the Luz Hair brand in visual form — premium, intentional, beautiful.",
+    cta:"'Shop virgin hair. Link in bio.'",
+    format:"Product showcase / editorial", platform:"TikTok + Instagram Reel" },
+
+  { day:"Wed", date:"May 13", week:2, cat:"Virgin Hair", pillar:"edu", catKey:"virgin",
+    hook:"5 questions to ask your hair vendor before you spend a single dollar.",
+    direction:"Empowers the buyer. Makes Luz Hair look like the transparent, trustworthy brand by association. Ask each question and answer it from Luz Hair's perspective. Viewer feels informed AND sold to — without feeling sold to.",
+    cta:"'Luz Hair answers all 5. Come test us. Link in bio.'",
+    format:"List / educational", platform:"TikTok + Instagram Reel" },
+
+  { day:"Thu", date:"May 14", week:2, cat:"Virgin Hair", pillar:"elv", catKey:"virgin",
+    hook:"This is what premium virgin hair feels like straight out of the pack.",
+    direction:"Tactile showcase — hands running through the hair, texture close-ups, slow reveal of the full bundle. Music-led, no talking needed. The experience of touching high-quality hair, communicated through video.",
+    cta:"Text overlay: 'Yours. Link in bio.'",
+    format:"Sensory / ASMR-style product video", platform:"TikTok + Instagram Reel" },
+
+  // WEEK 3
+  { day:"Fri", date:"May 15", week:3, cat:"HEAVY CTA", pillar:"cta", catKey:"cta",
+    hook:"Your first order with Luz Hair comes with 15% off. No code needed. Just your decision.",
+    direction:"Confident, not desperate. 'We don't do flash sales. We don't beg for purchases. We offer quality and we let the product speak. But today — 15% off, first order.' Clean visual, text overlay, luxury feel. This is a statement, not a plea.",
+    cta:"'BNPL available. First order 15% off. Link in bio. Make the decision.'",
+    format:"Direct to camera — authority tone", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sat", date:"May 16", week:3, cat:"Curly Textures", pillar:"edu", catKey:"curly",
+    hook:"Not all curly hair is created equal. Here's what nobody in the raw hair space tells you.",
+    direction:"Deep curly vs loose wave vs kinky curly — break it down. Which textures hold better in humidity, last longer, style easier. Be specific. Be the expert. Buyers who learn from this video will only trust Luz Hair.",
+    cta:"'All curly textures available at Luz Hair. Link in bio.'",
+    format:"Educational breakdown video", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sun", date:"May 17", week:3, cat:"Curly Textures", pillar:"elv", catKey:"curly",
+    hook:"Curly raw hair. No manipulation. This is what it does on its own. 😮‍💨",
+    direction:"Natural curl pattern showcase. No heat, no product. Raw curly hair doing what it does. Premium audio, slow close-ups. The goal: make someone who's never worn curly raw hair feel like they're missing something major.",
+    cta:"'Raw curly textures. Luz Hair. Link in bio.'",
+    format:"Natural texture showcase", platform:"TikTok + Instagram Reel" },
+
+  { day:"Mon", date:"May 18", week:3, cat:"Curly Textures", pillar:"edu", catKey:"curly",
+    hook:"Why your curly hair lost its pattern after one wash — and how raw hair fixes that forever.",
+    direction:"Pain point hook. Address the frustration of curl pattern loss. Educate on why raw curly hair maintains its pattern due to intact cuticles. Real, practical value that positions the brand as the solution.",
+    cta:"'Switch to raw. Luz Hair. Link in bio.'",
+    format:"Problem/solution educational", platform:"TikTok + Instagram Reel" },
+
+  { day:"Tue", date:"May 19", week:3, cat:"Curly Textures", pillar:"elv", catKey:"curly",
+    hook:"Luxury curls. Raw. Unfiltered. Yours. 🖤",
+    direction:"Full install showcase — curly raw hair, styled beautifully. Cinematic edit. Aspirational. The kind of content that makes someone stop mid-scroll and immediately check the link in bio. Every angle is intentional.",
+    cta:"'Get your curls. Shop Luz Hair. Link in bio.'",
+    format:"Full install / lifestyle", platform:"TikTok + Instagram Reel" },
+
+  { day:"Wed", date:"May 20", week:3, cat:"Closures", pillar:"edu", catKey:"closures",
+    hook:"You're installing your closure wrong. And it's ruining your entire install.",
+    direction:"Confident, knowledgeable hook. Educate on proper closure placement, correct parting space, lace type differences, and bleaching tips. Position Luz Hair as the brand that teaches — not just sells. End by showcasing the Luz Hair closure.",
+    cta:"'Our closures are designed to make this easy. Shop Luz Hair. Link in bio.'",
+    format:"Educational tutorial-style", platform:"TikTok + Instagram Reel" },
+
+  { day:"Thu", date:"May 21", week:3, cat:"Frontal", pillar:"elv", catKey:"frontal",
+    hook:"A frontal that lays like it grew there. No cap. 🖤",
+    direction:"Luxury frontal install showcase. Hairline, lace melt, movement. Cinematic. Aspirational. Let the product command the room. Close-ups on the hairline, the natural-looking parts, the density. This is the most aspirational content of the month.",
+    cta:"'Shop frontals at Luz Hair. Link in bio.'",
+    format:"Cinematic frontal install", platform:"TikTok + Instagram Reel" },
+
+  // WEEK 4
+  { day:"Fri", date:"May 22", week:4, cat:"HEAVY CTA", pillar:"cta", catKey:"cta",
+    hook:"Raw hair once. Every 3 months never again.",
+    direction:"The investment argument. 'Most women buying synthetic or processed hair spend more in a year than our raw hair costs.' Show the breakdown on screen. $150 x 4 = $600/year. Raw hair = one investment, 2-3 years minimum. BNPL removes the final barrier.",
+    cta:"'First order 15% off. Pay in instalments. One investment. Years of hair. Link in bio.'",
+    format:"Math breakdown / direct to camera", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sat", date:"May 23", week:4, cat:"Bone Straight", pillar:"edu", catKey:"bone",
+    hook:"Bone straight hair is having a moment. But not all bone straight is worth your money.",
+    direction:"Educate on what makes bone straight raw hair different from chemically processed bone straight. Cuticle integrity, longevity, maintenance reality. Bold, honest comparison. Make the buyer feel like the informed choice is obvious.",
+    cta:"'Shop real bone straight raw hair. Luz Hair. Link in bio.'",
+    format:"Comparison / educational", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sun", date:"May 24", week:4, cat:"Bone Straight", pillar:"elv", catKey:"bone",
+    hook:"Sleek. Sharp. Straight. 🖤 This is what Luz Hair bone straight looks like in real life.",
+    direction:"Clean, editorial bone straight showcase. High shine, perfect movement, luxury aesthetic. The hair speaks. Lighting is everything. Slow camera work. Every frame should feel intentional and premium.",
+    cta:"'Shop bone straight. Luz Hair. Link in bio.'",
+    format:"Editorial product showcase", platform:"TikTok + Instagram Reel" },
+
+  { day:"Mon", date:"May 25", week:4, cat:"Bone Straight", pillar:"edu", catKey:"bone",
+    hook:"Why bone straight raw hair doesn't need heat every day — and why that matters for your edges.",
+    direction:"Practical education. Bone straight raw hair maintains its finish due to cuticle alignment — less heat damage, less manipulation needed. Position this as a health-conscious, long-term investment for the viewer's hair AND scalp.",
+    cta:"'Protect your edges. Invest in raw. Luz Hair. Link in bio.'",
+    format:"Educational / health angle", platform:"TikTok + Instagram Reel" },
+
+  { day:"Tue", date:"May 26", week:4, cat:"Bone Straight", pillar:"elv", catKey:"bone",
+    hook:"The install that ends the conversation. 😮‍💨🖤",
+    direction:"Bone straight full install — sleek, laid, premium. Camera angles that show length, shine, movement. Let it breathe. No clutter. Pure visual luxury. This is the closer for bone straight week — the image that makes people add to cart.",
+    cta:"'Shop Luz Hair bone straight. Link in bio.'",
+    format:"Full install showcase", platform:"TikTok + Instagram Reel" },
+
+  { day:"Wed", date:"May 27", week:4, cat:"Clip-Ins", pillar:"edu", catKey:"clipins",
+    hook:"We just dropped clip-ins. And they're not what you think. 🖤",
+    direction:"New product introduction with education — what makes Luz Hair clip-ins different, the quality of the weft, the ease of application, who they're for. Position them as the luxury everyday option. Build excitement and urgency around the newness.",
+    cta:"'New. Available now. 15% off your first order. Link in bio.'",
+    format:"Product launch / educational", platform:"TikTok + Instagram Reel" },
+
+  { day:"Thu", date:"May 28", week:4, cat:"REST", pillar:"rest", catKey:"rest",
+    hook:"—", direction:"Rest day. No post.", cta:"—", format:"—", platform:"—" },
+
+  // WEEK 5
+  { day:"Fri", date:"May 29", week:5, cat:"HEAVY CTA", pillar:"cta", catKey:"cta",
+    hook:"May is almost over. This is your last chance to get 15% off your first Luz Hair order.",
+    direction:"Month-end urgency push. 'We built this brand for women who know their worth. Who don't settle. Who invest in quality once instead of cheap twice.' Real deadline. Real urgency. Clean visual. Premium aesthetic even in the close.",
+    cta:"'15% off. BNPL available. This offer ends with the month. Link in bio. Make the call.'",
+    format:"Direct to camera — closing statement", platform:"TikTok + Instagram Reel" },
+
+  { day:"Sat", date:"May 30", week:5, cat:"REST", pillar:"rest", catKey:"rest",
+    hook:"—", direction:"Rest day. No post.", cta:"—", format:"—", platform:"—" },
+
+  { day:"Sun", date:"May 31", week:5, cat:"REST", pillar:"rest", catKey:"rest",
+    hook:"—", direction:"Rest day. No post.", cta:"—", format:"—", platform:"—" },
+];
+
+// ══════════════════════════════════════════════
+// CATEGORY PROGRESS DATA
+// ══════════════════════════════════════════════
+const categories = {
+  viet:     { name:"Raw Vietnamese",  total:4 },
+  indian:   { name:"Raw Indian",      total:4 },
+  virgin:   { name:"Virgin Hair",     total:4 },
+  curly:    { name:"Curly Textures",  total:4 },
+  bone:     { name:"Bone Straight",   total:4 },
+  cta:      { name:"Heavy CTA",       total:5 },
+  closures: { name:"Closures",        total:1 },
+  frontal:  { name:"Frontal",         total:1 },
+  clipins:  { name:"Clip-Ins",        total:1 },
+};
+
+// ══════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════
+const state = JSON.parse(localStorage.getItem('luzHairMay') || '{}');
+
+function saveState() {
+  localStorage.setItem('luzHairMay', JSON.stringify(state));
+}
+
+// ══════════════════════════════════════════════
+// RENDER DAY CARDS
+// ══════════════════════════════════════════════
+function pillarClass(p) {
+  if(p==='edu') return 'edu-card';
+  if(p==='elv') return 'elv-card';
+  if(p==='cta') return 'cta-card';
+  return 'rest';
+}
+
+function pillarBadge(p) {
+  const map = {
+    edu: ['edu','🎓 Educate'],
+    elv: ['elv','✨ Elevate'],
+    cta: ['cta','💰 Heavy CTA'],
+    rest: ['rest-badge','— Rest']
+  };
+  const [cls, label] = map[p] || ['rest-badge','—'];
+  return `<span class="pillar-badge ${cls}">${label}</span>`;
+}
+
+function renderDays() {
+  for(let w=1; w<=5; w++) {
+    const container = document.getElementById(`days-w${w}`);
+    const wDays = days.filter(d=>d.week===w);
+    container.innerHTML = wDays.map((d,i) => {
+      const id = `day-${d.date.replace(/\s/g,'-')}`;
+      const status = state[id] || 'pending';
+      const isRest = d.pillar === 'rest';
+      return `
+      <div class="day-card ${pillarClass(d.pillar)}" id="${id}-card">
+        <div class="day-header" onclick="toggleDay('${id}')">
+          <div class="day-date-block">
+            <span class="day-name">${d.day}</span>
+            <span class="day-date">${d.date.split(' ')[1]}</span>
+          </div>
+          <div class="day-meta">
+            <div class="day-category">${isRest ? 'Rest Day' : d.cat}</div>
+            ${!isRest ? `<div class="day-hook">"${d.hook.length>80 ? d.hook.slice(0,80)+'…' : d.hook}"</div>` : '<div class="day-hook" style="color:var(--muted);font-style:normal;">No post scheduled</div>'}
+          </div>
+          <div class="day-right">
+            ${pillarBadge(d.pillar)}
+            ${!isRest ? `
+            <div class="status-toggle">
+              <button class="status-btn ${status==='scheduled'?'scheduled':''}" onclick="setStatus(event,'${id}','scheduled')" title="Mark Scheduled">📅</button>
+              <button class="status-btn ${status==='done'?'done':''}" onclick="setStatus(event,'${id}','done')" title="Mark Posted">✓</button>
+              <div class="expand-icon">+</div>
+            </div>` : '<div class="expand-icon">+</div>'}
+          </div>
+        </div>
+        ${!isRest ? `
+        <div class="day-body">
+          <div class="detail-grid">
+            <div class="detail-block full">
+              <div class="detail-label">Hook</div>
+              <div class="cta-text">"${d.hook}"</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Content Direction</div>
+              <div class="detail-text">${d.direction}</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Call to Action</div>
+              <div class="detail-text">${d.cta}</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Format</div>
+              <div class="detail-text"><strong>${d.format}</strong></div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Platform</div>
+              <div class="detail-text"><strong>${d.platform}</strong></div>
+            </div>
+          </div>
+        </div>` : ''}
+      </div>`;
+    }).join('');
+  }
+}
+
+function toggleDay(id) {
+  const card = document.getElementById(`${id}-card`);
+  card.classList.toggle('expanded');
+}
+
+function setStatus(e, id, status) {
+  e.stopPropagation();
+  const current = state[id] || 'pending';
+  state[id] = current === status ? 'pending' : status;
+  saveState();
+  renderDays();
+  updateTracker();
+  updateCatProgress();
+  updateGlobalStats();
+}
+
+// ══════════════════════════════════════════════
+// GLOBAL TRACKER
+// ══════════════════════════════════════════════
+function updateTracker() {
+  const grid = document.getElementById('globalTracker');
+  grid.innerHTML = days.map(d => {
+    const id = `day-${d.date.replace(/\s/g,'-')}`;
+    const status = state[id] || 'pending';
+    const isRest = d.pillar === 'rest';
+    const isCta = d.pillar === 'cta';
+    let cls = '';
+    if(isRest) cls = 'rest-day';
+    else if(status==='done') cls = 'done';
+    else if(status==='scheduled') cls = 'scheduled';
+    else if(isCta) cls = 'cta-day';
+    const num = d.date.split(' ')[1];
+    return `<div class="global-dot ${cls}" data-label="${d.date} · ${d.cat}">${num}</div>`;
+  }).join('');
+}
+
+function updateGlobalStats() {
+  const postable = days.filter(d=>d.pillar!=='rest');
+  const done = postable.filter(d=>state[`day-${d.date.replace(/\s/g,'-')}`]==='done').length;
+  const sched = postable.filter(d=>state[`day-${d.date.replace(/\s/g,'-')}`]==='scheduled').length;
+  const pending = postable.length - done - sched;
+  const pct = Math.round((done/postable.length)*100);
+  document.getElementById('t-done').textContent = done;
+  document.getElementById('t-sched').textContent = sched;
+  document.getElementById('t-pending').textContent = pending;
+  document.getElementById('t-pct').textContent = pct+'%';
+  document.getElementById('doneCount').textContent = done;
+}
+
+// ══════════════════════════════════════════════
+// CATEGORY PROGRESS
+// ══════════════════════════════════════════════
+function updateCatProgress() {
+  const grid = document.getElementById('catProgressGrid');
+  grid.innerHTML = Object.entries(categories).map(([key, cat]) => {
+    const catDays = days.filter(d=>d.catKey===key && d.pillar!=='rest');
+    const done = catDays.filter(d=>state[`day-${d.date.replace(/\s/g,'-')}`]==='done').length;
+    const pct = catDays.length ? Math.round((done/catDays.length)*100) : 0;
+    return `
+    <div class="cat-progress">
+      <div class="cat-progress-name">${cat.name}</div>
+      <div class="cat-progress-bar-wrap">
+        <div class="cat-progress-bar" style="width:${pct}%"></div>
+      </div>
+      <div class="cat-progress-nums">
+        <span>${done}/${catDays.length} posted</span>
+        <span>${pct}%</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════
+// WEEK NAV
+// ══════════════════════════════════════════════
+function showWeek(n, btn) {
+  document.querySelectorAll('.week-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.week-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(`week${n}`).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ══════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════
+renderDays();
+updateTracker();
+updateCatProgress();
+updateGlobalStats();
+
+// Animate progress bars on load
+setTimeout(() => {
+  document.querySelectorAll('.cat-progress-bar').forEach(bar => {
+    bar.style.width = bar.style.width;
+  });
+}, 100);
+</script>
+</body>
+</html>
